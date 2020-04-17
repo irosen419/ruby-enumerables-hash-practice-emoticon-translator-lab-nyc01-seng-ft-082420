@@ -13,12 +13,16 @@ def load_library(file)
 end
 
 def get_japanese_emoticon(file, symbol)
+  var = nil
   load_library(file).map do |key, value|
     if value[:english] == symbol
-      return value[:japanese]
-    else
-      return "Sorry, that emoticon was not found"
+      var = value[:japanese]
     end
+  end
+  if var
+    return var
+  else
+    return "Sorry, that emoticon was not found"
   end
 end
 
