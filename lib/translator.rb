@@ -16,8 +16,6 @@ def get_japanese_emoticon(file, symbol)
   load_library(file).map do |key, value|
     if value[:english] == symbol
       return value[:japanese]
-    else
-      return "Sorry, that emoticon was not found"
     end
   end
 end
