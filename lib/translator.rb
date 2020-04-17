@@ -34,7 +34,7 @@ def get_english_meaning(file, symbol)
 		end
 	end
 	if var
-	  return key
+	  return var
 	else
 	  return "Sorry, that emoticon was not found"
 	end
