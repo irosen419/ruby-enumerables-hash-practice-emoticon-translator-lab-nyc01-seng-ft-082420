@@ -14,8 +14,8 @@ end
 
 def get_japanese_emoticon(file, symbol)
   load_library(file).map do |key, value|
-    if value[:english].to_s == symbol
-      value[:japanese].to_s
+    if value[:english] == symbol
+      value[:japanese]
     end
   end
 end
