@@ -20,9 +20,9 @@ def get_japanese_emoticon(file, symbol)
   end
 end
 
-def get_english_meaning(file, emoticon)
+def get_english_meaning(file, symbol)
   load_library(file).map do |key, value|
-		if value[:japanese] == emoticon
+		if value[:japanese] == symbol=
 			key
 		end
 	end
