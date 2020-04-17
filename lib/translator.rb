@@ -26,8 +26,6 @@ def get_english_meaning(file, symbol)
   load_library(file).map do |key, value|
 		if value[:japanese] == symbol
 			return key
-		else
-      return "Sorry, that emoticon was not found"
 		end
 	end
 end
